@@ -1,0 +1,11 @@
+entities\Tarea.class
+ejb\TareaFacadeLocal.class
+entities\Usuario_.class
+entities\Tarea_.class
+controller\Transaccion.class
+ejb\UsuarioFacade.class
+ejb\AbstractFacade.class
+ejb\TareaFacade.class
+controller\TransaccionLocal.class
+ejb\UsuarioFacadeLocal.class
+entities\Usuario.class
