@@ -52,4 +52,11 @@ public class TareaFacade extends AbstractFacade<Tarea> implements TareaFacadeLoc
         em.persist(tarea);
     }
     
+    @Override
+    @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+    public void agregarFailNS(String nombre, int duracion){
+        Tarea tarea = new Tarea(nombre, duracion);
+        em.persist(tarea);
+    }
+    
 }

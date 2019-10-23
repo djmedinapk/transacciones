@@ -13,14 +13,29 @@ import javax.ejb.Local;
  */
 @Local
 public interface TransaccionLocal {
-    
+
     public void agregarRequired();
-    
-   public void agregarRequiredNew();
-   
-   public void agregar2Required();
-   
-   public void agregar2RequiredNew();
-   
-   
+
+    public void agregar2Required();
+
+    public void agregarRequiredNew();
+
+    public void agregar2RequiredNew();
+
+    public void agregar2Supports();
+
+    public void agregarSupports();
+
+    public void agregarMandatory();
+
+    public void agregar2Mandatory();
+
+    public void agregarNotSupported();
+
+    public void agregar2NotSupported();
+
+    public void agregarNever();
+
+    public void agregar2Never();
+
 }

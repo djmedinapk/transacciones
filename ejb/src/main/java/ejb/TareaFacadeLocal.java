@@ -34,5 +34,6 @@ public interface TareaFacadeLocal {
     public void agregarRequiredNew(String nombre, int duracion);
     
     public void agregarFail(String nombre, int duracion);
+    public void agregarFailNS(String nombre, int duracion);
     
 }
