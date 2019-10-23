@@ -154,9 +154,4 @@ public class Transaccion implements TransaccionLocal {
         public void agregar2Never(){
             usuariolocal.agregarUsuarioNever("raul", "mendez", "menraul@mail.com");
         }
-        
-        
-        
-    
-    
 }

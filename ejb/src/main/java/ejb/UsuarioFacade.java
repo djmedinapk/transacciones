@@ -48,7 +48,7 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
     @TransactionAttribute(TransactionAttributeType.SUPPORTS)
     public void agregarUsuarioSupports(String nombre, String apellido, String correo) {
         Usuario user = new Usuario(nombre, apellido, correo);
-        create(user);
+        em.persist(user);
     }
     
     
@@ -64,11 +64,11 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public void agregarUsuarionotSupported(String nombre, String apellido, String correo) {
         Usuario user = new Usuario(nombre, apellido, correo);
-        create(user);
+        em.persist(user);
     }
     
     /**
-     * solo define el estado de transacción requerido que debe existir
+     *  solo define el estado de transacción requerido que debe existir
      * cuando se invoca el método anotado (en este caso, una transacción
      * no debe existir).
      * @param nombre
@@ -79,8 +79,9 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
     @TransactionAttribute(TransactionAttributeType.NEVER)
     
     public void agregarUsuarioNever(String nombre, String apellido, String correo) {
-        Usuario user = new Usuario(nombre, apellido, correo);
-        create(user);
+        int a = 0;
+        int b = 5;
+        int c = a+b;
     }
     
 }
