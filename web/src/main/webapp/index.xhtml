@@ -17,65 +17,178 @@
             button{
                 width: 100%;
             }
+            .tg  {border-collapse:collapse;border-spacing:0;width:100%;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
         </style>
     </h:head>
     <h:body>
         <h:form>
-            <div>
-                
+            Sin Transacción
+            <div style="width:100%">
+                <table class="tg">
+                    <tr>
+                        <th class="tg-0lax">Required ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton11()}" />
+                        </th>
+                        <th class="tg-0lax">Required ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton11f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">RequiredNew ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton12()}" />
+                        </th>
+                        <th class="tg-0lax">RequiredNew ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton12f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Supports ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton13()}" />
+                        </th>
+                        <th class="tg-0lax">Supports ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton13f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Mandatory ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton14()}" />
+                        </th>
+                        <th class="tg-0lax">Mandatory ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton14f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Not Supports ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton15()}" />
+                        </th>
+                        <th class="tg-0lax">Not Supports ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton15f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Never ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton16()}" />
+                        </th>
+                        <th class="tg-0lax">Never ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton16f()}" />
+                        </th>
+                    </tr>
+                </table>
             </div>
-            <div>
-            <p:commandButton value="agregar sin transaccion Requerid " icon="pi pi-check" style="margin:0" action="#{index.boton11()}" />
+            Con Transacción
+            <div style="width:100%">
+                <table class="tg">
+                    <tr>
+                        <th class="tg-0lax">Required ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton21()}" />
+                        </th>
+                        <th class="tg-0lax">Required ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton21f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">RequiredNew ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton22()}" />
+                        </th>
+                        <th class="tg-0lax">RequiredNew ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton22f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Supports ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton23()}" />
+                        </th>
+                        <th class="tg-0lax">Supports ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton23f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Mandatory ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton24()}" />
+                        </th>
+                        <th class="tg-0lax">Mandatory ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton24f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Not Supports ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton25()}" />
+                        </th>
+                        <th class="tg-0lax">Not Supports ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton25f()}" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="tg-0lax">Never ok ok</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton26()}" />
+                        </th>
+                        <th class="tg-0lax">Never ok fail</th>
+                        <th class="tg-0lax">
+                            <p:commandButton update="tareaaTable tareaaTable2" value="btn" icon="pi pi-check" style="margin:0" action="#{index.boton26f()}" />
+                        </th>
+                    </tr>
+                </table>
             </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Requerid " icon="pi pi-check" style="margin:0" action="#{index.boton12()}" />
-           </div>
-           
-            
-            
-            <div>
-            <p:commandButton value="agregar sin transaccion Requerid New" icon="pi pi-check" style="margin:0" action="#{index.boton21()}" />
+            <div style="width:100%">
+                <p:commandButton update="tareaaTable tareaaTable2" value="Limpiar" icon="pi pi-check" style="margin:0" action="#{index.clearData()}" />
+                <p:dataTable id="tareaaTable" class="tg" var="tarea" value="#{index.tareas}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{tarea.id}" />
+                    </p:column>
+
+                    <p:column headerText="Year">
+                        <h:outputText value="#{tarea.nombre}" />
+                    </p:column>
+
+                    <p:column headerText="Brand">
+                        <h:outputText value="#{tarea.duracion}" />
+                    </p:column>
+                </p:dataTable>
             </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Requerid New" icon="pi pi-check" style="margin:0" action="#{index.boton22()}" />
-           </div>
-           
-            
-            
-            <div>
-            <p:commandButton value="agregar sin transaccion Supports" icon="pi pi-check" style="margin:0" action="#{index.boton31()}" />
+            <div style="width:100%">
+                <p:dataTable id="tareaaTable2" class="tg" var="user" value="#{index.usuarios}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{user.id}" />
+                    </p:column>
+
+                    <p:column headerText="Year">
+                        <h:outputText value="#{user.nombre}" />
+                    </p:column>
+
+                    <p:column headerText="Brand">
+                        <h:outputText value="#{user.correo}" />
+                    </p:column>
+                </p:dataTable>
             </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Supports" icon="pi pi-check" style="margin:0" action="#{index.boton32()}" />
-           </div>
-           
             
-            
-            <div>
-            <p:commandButton value="agregar sin transaccion Mandatory" icon="pi pi-check" style="margin:0" action="#{index.boton41()}" />
-            </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Mandatory" icon="pi pi-check" style="margin:0" action="#{index.boton42()}" />
-           </div>
-           
-            
-            <div>
-            <p:commandButton value="agregar sin transaccion Not Supported" icon="pi pi-check" style="margin:0" action="#{index.boton51()}" />
-            </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Not Supported" icon="pi pi-check" style="margin:0" action="#{index.boton52()}" />
-           </div>
-           
-            
-            <div>
-            <p:commandButton value="agregar sin transaccion Never" icon="pi pi-check" style="margin:0" action="#{index.boton61()}" />
-            </div>
-            <div>
-            <p:commandButton value="agregar con transaccion Never" icon="pi pi-check" style="margin:0" action="#{index.boton62()}" />
-           </div>
-           
-            
+
         </h:form>
-        
+
     </h:body>
 </html>

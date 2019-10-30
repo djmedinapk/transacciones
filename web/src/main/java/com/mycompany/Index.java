@@ -8,7 +8,11 @@ package com.mycompany;
 import controller.TransaccionLocal;
 import ejb.TareaFacadeLocal;
 import ejb.UsuarioFacadeLocal;
+import entities.Tarea;
 import entities.Usuario;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -22,14 +26,16 @@ import javax.enterprise.context.RequestScoped;
 public class Index {
 
     @EJB
-    TransaccionLocal transaccionlocal;
+    private TransaccionLocal transaccionlocal;
 
     @EJB
-    TareaFacadeLocal tarealocal;
+    private TareaFacadeLocal tarealocal;
 
     @EJB
-    UsuarioFacadeLocal usuariolocal;
+    private UsuarioFacadeLocal usuariolocal;
 
+    private List<Tarea> tareas = new ArrayList<Tarea>();
+    private List<Usuario> usuarios = new ArrayList<Usuario>();
     /**
      * Creates a new instance of Index
      */
@@ -37,52 +43,181 @@ public class Index {
     }
 
     public void boton11() {
-        tarealocal.agregarRequired("Tarea1", 1);
+        getTransaccionlocal().agregarRequired("t1Required", 1);
     }
-
+    public void boton11f() {
+        getTransaccionlocal().agregarRequired(null, 1);
+    }
+    
     public void boton12() {
-        transaccionlocal.agregar2Required();
+        getTransaccionlocal().agregarRequiredNew("t1RequiredNew", 1);
     }
-
+    public void boton12f() {
+        getTransaccionlocal().agregarRequiredNew(null, 1);
+    }
+    
+    public void boton13() {
+        getTransaccionlocal().agregarSupports("t1Supports", 1);
+    }
+    public void boton13f() {
+        getTransaccionlocal().agregarSupports(null, 1);
+    }
+    
+    public void boton14() {
+        getTransaccionlocal().agregarMandatory("t1Mandatory", 1);
+    }
+    public void boton14f() {
+        getTransaccionlocal().agregarMandatory(null, 1);
+    }
+    
+    
+    public void boton15() {
+        getTransaccionlocal().agregarNotSupported("t1NotSupportes", 1);
+    }
+    public void boton15f() {
+        getTransaccionlocal().agregarNotSupported(null, 1);
+    }
+    
+    
+    public void boton16() {
+        getTransaccionlocal().agregarNever("t1Never", 1);
+    }
+    public void boton16f() {
+        getTransaccionlocal().agregarNever(null, 1);
+    }
+    
+    
+    
+    
+    
     public void boton21() {
-        transaccionlocal.agregarRequiredNew();
+        getTransaccionlocal().agregar2Required("t2Required", 1);
     }
-
+    public void boton21f() {
+        getTransaccionlocal().agregar2Required(null, 1);
+    }
+    
     public void boton22() {
-        transaccionlocal.agregar2RequiredNew();
+        getTransaccionlocal().agregar2RequiredNew("t2RequiredNew", 1);
+    }
+    public void boton22f() {
+        getTransaccionlocal().agregar2RequiredNew(null, 1);
+    }
+    
+    public void boton23() {
+        getTransaccionlocal().agregar2Supports("t2Supports", 1);
+    }
+    public void boton23f() {
+        getTransaccionlocal().agregar2Supports(null, 1);
+    }
+    
+    public void boton24() {
+        getTransaccionlocal().agregar2Mandatory("t2Mandatory", 1);
+    }
+    public void boton24f() {
+        getTransaccionlocal().agregar2Mandatory(null, 1);
+    }
+    
+    
+    public void boton25() {
+        getTransaccionlocal().agregar2NotSupported("t2NotSupportes", 1);
+    }
+    public void boton25f() {
+        getTransaccionlocal().agregar2NotSupported(null, 1);
+    }
+    
+    
+    public void boton26() {
+        getTransaccionlocal().agregar2Never("t2Never", 1);
+    }
+    public void boton26f() {
+        getTransaccionlocal().agregar2Never(null, 1);
+    }
+    
+    
+    @PostConstruct
+    public void cargarDatos(){
+    }
+    
+    public void clearData(){
+        for (Tarea tarea : tareas) {
+            tarealocal.remove(tarea);
+        }
+        for (Usuario user : usuarios) {
+            usuariolocal.remove(user);
+        }
     }
 
-    public void boton31() {
-        usuariolocal.agregarUsuarioSupports("raul", "mendez", "menraul@mail.com");
-        tarealocal.agregarFail(null, 2);
+    /**
+     * @return the transaccionlocal
+     */
+    public TransaccionLocal getTransaccionlocal() {
+        return transaccionlocal;
     }
 
-    public void boton32() {
-        transaccionlocal.agregar2Supports();
+    /**
+     * @param transaccionlocal the transaccionlocal to set
+     */
+    public void setTransaccionlocal(TransaccionLocal transaccionlocal) {
+        this.transaccionlocal = transaccionlocal;
     }
 
-    public void boton41() {
-        usuariolocal.agregarUsuarioMandatory("raul", "mendez", "menraul@mail.com");
+    /**
+     * @return the tarealocal
+     */
+    public TareaFacadeLocal getTarealocal() {
+        return tarealocal;
     }
 
-    public void boton42() {
-        transaccionlocal.agregar2Mandatory();
+    /**
+     * @param tarealocal the tarealocal to set
+     */
+    public void setTarealocal(TareaFacadeLocal tarealocal) {
+        this.tarealocal = tarealocal;
     }
 
-    public void boton51() {
-        tarealocal.agregarFailNS(null, 2);
+    /**
+     * @return the usuariolocal
+     */
+    public UsuarioFacadeLocal getUsuariolocal() {
+        return usuariolocal;
     }
 
-    public void boton52() {
-        transaccionlocal.agregar2NotSupported();
+    /**
+     * @param usuariolocal the usuariolocal to set
+     */
+    public void setUsuariolocal(UsuarioFacadeLocal usuariolocal) {
+        this.usuariolocal = usuariolocal;
     }
 
-    public void boton61() {
-        usuariolocal.agregarUsuarioNever("raul", "mendez", "menraul@mail.com");
+    /**
+     * @return the tareas
+     */
+    public List<Tarea> getTareas() {
+        setTareas(tarealocal.findAll());
+        return tareas;
     }
 
-    public void boton62() {
-        transaccionlocal.agregar2Never();
+    /**
+     * @param tareas the tareas to set
+     */
+    public void setTareas(List<Tarea> tareas) {
+        this.tareas = tareas;
+    }
+
+    /**
+     * @return the usuarios
+     */
+    public List<Usuario> getUsuarios() {
+        setUsuarios(usuariolocal.findAll());
+        return usuarios;
+    }
+
+    /**
+     * @param usuarios the usuarios to set
+     */
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 
 }

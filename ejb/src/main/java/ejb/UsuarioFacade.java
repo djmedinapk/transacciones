@@ -37,6 +37,14 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
         em.persist(user);
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void agregarUsuarioRequiredNew(String nombre, String apellido, String correo) {

@@ -29,11 +29,21 @@ public interface TareaFacadeLocal {
     List<Tarea> findRange(int[] range);
 
     int count();
-    
+
     public void agregarRequired(String nombre, int duracion);
+
     public void agregarRequiredNew(String nombre, int duracion);
-    
+
+    public void agregarSupports(String nombre, int duracion);
+
+    public void agregarNotSupported(String nombre, int duracion);
+
+    public void agregarMandatory(String nombre, int duracion);
+
+    public void agregarNever(String nombre, int duracion);
+
     public void agregarFail(String nombre, int duracion);
+
     public void agregarFailNS(String nombre, int duracion);
-    
+
 }

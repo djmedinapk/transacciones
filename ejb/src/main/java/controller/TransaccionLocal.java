@@ -14,28 +14,28 @@ import javax.ejb.Local;
 @Local
 public interface TransaccionLocal {
 
-    public void agregarRequired();
+    public void agregarRequired(String nombre, int duracion);
 
-    public void agregar2Required();
+    public void agregarRequiredNew(String nombre, int duracion);
 
-    public void agregarRequiredNew();
+    public void agregarSupports(String nombre, int duracion);
 
-    public void agregar2RequiredNew();
+    public void agregarMandatory(String nombre, int duracion);
 
-    public void agregar2Supports();
+    public void agregarNotSupported(String nombre, int duracion);
 
-    public void agregarSupports();
+    public void agregarNever(String nombre, int duracion);
 
-    public void agregarMandatory();
+    public void agregar2Required(String nombre, int duracion);
 
-    public void agregar2Mandatory();
+    public void agregar2RequiredNew(String nombre, int duracion);
 
-    public void agregarNotSupported();
+    public void agregar2Supports(String nombre, int duracion);
 
-    public void agregar2NotSupported();
+    public void agregar2Mandatory(String nombre, int duracion);
 
-    public void agregarNever();
+    public void agregar2NotSupported(String nombre, int duracion);
 
-    public void agregar2Never();
+    public void agregar2Never(String nombre, int duracion);
 
 }

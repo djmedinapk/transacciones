@@ -6,6 +6,7 @@
 package ejb;
 
 import entities.Tarea;
+import entities.Usuario;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -33,6 +34,9 @@ public class TareaFacade extends AbstractFacade<Tarea> implements TareaFacadeLoc
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public void agregarRequired(String nombre, int duracion){
+        Usuario user = new Usuario("user1Requerid","apel1","mail1");
+        em.persist(user);
+        
         Tarea tarea = new Tarea(nombre, duracion);
         em.persist(tarea);
     }
@@ -41,6 +45,49 @@ public class TareaFacade extends AbstractFacade<Tarea> implements TareaFacadeLoc
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void agregarRequiredNew(String nombre, int duracion){
+        Usuario user = new Usuario("user1RequeridNew","apel1","mail1");
+        em.persist(user);
+        
+        Tarea tarea = new Tarea(nombre, duracion);
+        em.persist(tarea);
+    }
+    
+    @Override
+    @TransactionAttribute(TransactionAttributeType.SUPPORTS)
+    public void agregarSupports(String nombre, int duracion){
+        Usuario user = new Usuario("user1SUPPORTS","apel1","mail1");
+        em.persist(user);
+        
+        Tarea tarea = new Tarea(nombre, duracion);
+        em.persist(tarea);
+    }
+    
+    @Override
+    @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+    public void agregarNotSupported(String nombre, int duracion){
+        Usuario user = new Usuario("user1NOTSUPPORTED","apel1","mail1");
+        em.persist(user);
+        
+        Tarea tarea = new Tarea(nombre, duracion);
+        em.persist(tarea);
+    }
+    
+    @Override
+    @TransactionAttribute(TransactionAttributeType.MANDATORY)
+    public void agregarMandatory(String nombre, int duracion){
+        Usuario user = new Usuario("user1MANDATORY","apel1","mail1");
+        em.persist(user);
+        
+        Tarea tarea = new Tarea(nombre, duracion);
+        em.persist(tarea);
+    }
+    
+    @Override
+    @TransactionAttribute(TransactionAttributeType.NEVER)
+    public void agregarNever(String nombre, int duracion){
+        Usuario user = new Usuario("user1Never","apel1","mail1");
+        em.persist(user);
+        
         Tarea tarea = new Tarea(nombre, duracion);
         em.persist(tarea);
     }
